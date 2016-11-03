@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7 ie6"> <![endif]-->
+<!--[if IE 7]>	<html class="no-js  lt-ie10 lt-ie9 lt-ie8 ie7"> <![endif]-->
+<!--[if IE 8]>	<html class="no-js lt-ie10 lt-ie9 ie8"> <![endif]-->
+<!--[if IE 9]>	<html class="no-js lt-ie10 ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-Br" ng-app="detalheProduto"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>Teste - Thiago Hille do Nascimento</title>
+    <!-- build:css assets/css/index.min.css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/index.min.css" />
+    <!-- endbuild -->
+</head>
+<body ng-controller="detalheProdutoCtrl">
+    <div class="grid">
+        <div class="col-1-1">
+            <div itemscope itemtype="http://data-vocabulary.org/Product" class="content">
+                <h2 itemprop="name" ng-bind="product.title"></h2>
+                <div class="grid">
+                    <div class="col-1-2 mobile-col-1-1">
+                        <section class="content">
+                            <div class="col-1-12 mobile-col-1-1">
+                                <img src="assets/img/01.jpeg" alt="HTML5" width="47px" class="thumb_img active" />
+                            </div>
+                            <div class="viewImg col-1-11 mobile-col-1-1">
+                                <a id="zoom-default" class="zoom" href="assets/img/01.jpeg" target="_blank">
+                                    <img src="assets/img/01.jpeg" alt="Ipad Mini Apple 16 Gb Wifi Led 7.9" role="banner" />
+                                </a>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-1-2 mobile-col-1-1">
+                        <section class="content">
+                            <form action="#">
+                                <input itemprop="productID" type="hidden" name="productId" value="{{product.id}}" disabled>
+                                <div class="ch-form-actions">
+                                    
+                                </div>
+                                <fieldset itemprop="offers" class="view-price">
+                                    <legend>Price</legend>
+                                    <article itemprop="price" class="ch-price">
+                                        <strong>
+                                            $ 4799<sup>99</sup>
+                                        </strong>
+                                    </article>
+                                </fieldset>
+                                <hr>
+                                <fieldset itemprop="numberOfItems">
+                                    <legend>Quantity</legend>
+                                    <label for="select1">
+                                        Quantity
+                                    </label>
+                                    <select id="select1">
+                                        <option value="{{quantidade}}" ng-repeat="quantidade in quantidades">{{quantidade}}</option>
+                                    </select>
+                                </fieldset>
+                                <fieldset itemprop="priceSpecification">
+                                    <legend>Payments</legend>
+                                    <label for="select1">
+                                        Payments
+                                    </label>
+                                    <select id="select1" role="select">
+                                        <option value="{{parcela}}" ng-repeat="parcela in parcelas" ng-bind="parcela + 'x'"></option>
+                                    </select>
+                                </fieldset>
+                                <fieldset itemprop="buyItem">
+                                    <legend>Comprar producto</legend>
+                                    <input type="button" role="button" class="ch-btn ch-btn-large" value="Comprar">
+                                    <a class="" href="#">
+                                        <i class="ch-icon-heart ch-icon-x-large"></i>
+                                    </a>
+                                    <a class="" href="#">
+                                        <i class="ch-icon-comment ch-icon-x-large"></i>
+                                    </a>
+                                </fieldset>
+                                <p>MercadoLibre insn't the owner of this product.</p>
+                                <hr>
+                                <h3>More products like this</h3>
+                                
+                                <div class="demo-carousel ch-carousel">
+                                    <ul>
+                                        <li class="ch-carousel-item">
+                                            <img src="https://http2.mlstatic.com/S_516811-MLA20648946794_032016-G.jpg" width="150" height="auto">
+                                        </li>
+                                        <li class="ch-carousel-item">
+                                            <img src="http://img1.mlstatic.com/jm/img?v=F&f=mlinks/product_ads/MLA/169769622/93355556.1475955032699" width="150" height="auto">
+                                        </li>
+                                        <li class="ch-carousel-item">
+                                            <img src="http://img1.mlstatic.com/jm/img?v=F&f=mlinks/product_ads/MLA/134745964/89172421.1472854395767" width="150" height="auto">
+                                        </li>
+                                        <li class="ch-carousel-item">
+                                            <img src="http://img1.mlstatic.com/jm/img?v=F&f=mlinks/product_ads/MLA/134745964/89172421.1472854395767" width="150" height="auto">
+                                        </li>
+                                        <li class="ch-carousel-item">
+                                            <img src="http://img1.mlstatic.com/jm/img?v=F&f=mlinks/product_ads/MLA/134745964/89172421.1472854395767" width="150" height="auto">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="col-1-1 mobile-col-1-1">
+                        <div class="content">
+                            <div class="demo-tabs ch-tabs">
+                                <ul class="ch-tabs-triggers">
+                                    <li><a href="#tab-descricao" class="ch-tab" role="tab">Descrição do produto</a></li>
+                                    <li><a href="#tab-duvidas" class="ch-tab" role="tab">Dúvidas</a></li>
+                                </ul>
+                                <div class="ch-box-lite">
+                                    <div id="tab-descricao" role="tabpanel">
+                                        <p>
+                                            Imagens incríveis com uma qualidade que você nunca viu antes. Essa é apenas uma das qualidades tecnológicas do iPad mini com Tela Retina, o pequeno notável da Apple que vai deixar seu dia mais prático e cheio de opções de mobilidade e diversão.<br><br>
+                                            Ele possui o novo chip A7, conexão wireless extremamente avançada, apps poderosos para você exercitar sua criatividade e integração impecável com o iOS7.<br><br>
+                                            <b>Tela Retina:</b><br>Com tela de 7.9 polegadas, o iPad mini com Tela Retina é incrível de segurar e fantástico para utilizar.<br><br>
+                                            A visualização vai deixar os usuários mais exigentes de boca aberta, com texto mais nítido, cores mais vibrantes e imagens com exuberante riqueza de detalhes. Com 3,1 milhões de pixels, um milhão a mais do que uma TV HD, sua resolução de 2048x1536 é quatro vezes superior à geração anterior. Os pixels estão tão próximos que seus olhos não conseguem distinguir.<br><br>
+                                            <b>Fino e Leve:</b><br>
+                                            É difícil de acreditar que tanta tecnologia caiba em um aparelho tem discreto, leve e com um design inigualável.<br>
+                                            Pois o iPad mini com Tela Retina possui tudo isso em um espaço de apenas 7,5 milímetros de espessura e pesando apenas 350 gramas.<br><br>
+                                            <b>Chip A7:</b><br>
+                                            Uma arquitetura de nível desktop de 64 bits, que não exige muito da bateria com 10 horas de duração. O Chip A7 possui um desempenho surpreendente para os usuários mais exigentes.<br><br>
+
+                                            Além disso, o iPad mini com Tela Retina vem com o co-processador M7, que mede os dados de movimentação, deixando o A7 livre dessa função, o que possibilita uma duração geral superior da bateria.<br><br>
+                                            <b>Wi-Fi Ultrarrápido:</b><br>
+                                            O iPad mini com Tela Retina, vem com Wi-FI MIMO (múltipla entrada e múltipla saída), um sistema de conexão sem fio que utiliza duas antenas para enviar até o dobro de dados para transmissão de vídeo, AirDrop e muito mais.<br><br>
+                                            <b>Apps</b><br>Se você procura o companheiro perfeito para o dia a dia, este é o iPad mini com Tela Retina.<br>Ele vem com aplicativos que possibilitam que você faça tudo o que mais gosta, desde ler e-mails até fazer chamadas FaceTime.<br><br>
+                                            Além disso, você pode dar assas à sua imaginação e criatividade com o iPhoto, iMovie, GarageBand, Pages, Numbers e Keynote. Esses e outros aplicativos deixaram sua rotina muito mais agradável e simples.<br><br>
+                                            <b>Imagem meramente ilustrativa</b><br><br>
+                                            <small>Todas as informações divulgadas, bem como os benefícios e resultados do produto são de responsabilidade exclusiva do Fabricante/Fornecedor.</small><br><br>
+                                            <small>Verifique com os fabricantes do produto e de seus componentes eventuais limitações à utilização de todos os recursos e funcionalidades.</small>
+                                        </p>
+                                    </div>
+                                    <div id="tab-duvidas" role="tabpanel">
+                                        <div class="ch-box-lite">
+                                            <h4><i class="ch-icon-comment-alt"></i> Escreva uma mensagem</h4>
+                                            <textarea name="" id="" cols="1" rows="3"></textarea>
+                                        </div>
+                                        <article class="questions-list-question" role="post">
+                                            <p><span class="ch-icon-comment comment-blue"></span> Amigo preciso que chegue aqui em casa até o dia 3 de novembro será que tem possibilidade?</p>
+                                        </article>
+                                        <article class="questions-list-answer" role="post">
+                                            <p><span class="ch-icon-comment comment-gray"></span> Olá! Você consegue calcular o seu frete e o prazo de entrega no próprio anúncio, na parte superior próximo a informação de preço O Brused é um serviço de compra e venda de eletrônicos usados.</p>
+                                        </article>
+                                        <hr>
+                                        <article class="questions-list-question" role="post">
+                                            <p><span class="ch-icon-comment comment-blue"></span> Amigo preciso que chegue aqui em casa até o dia 3 de novembro será que tem possibilidade?</p>
+                                        </article>
+                                        <article class="questions-list-answer" role="post">
+                                            <p><span class="ch-icon-comment comment-gray"></span> Olá! Você consegue calcular o seu frete e o prazo de entrega no próprio anúncio, na parte superior próximo a informação de preço O Brused é um serviço de compra e venda de eletrônicos usados.</p>
+                                        </article>
+                                        <hr>
+                                        <article class="questions-list-question" role="post">
+                                            <p><span class="ch-icon-comment comment-blue"></span> Amigo preciso que chegue aqui em casa até o dia 3 de novembro será que tem possibilidade?</p>
+                                        </article>
+                                        <article class="questions-list-answer" role="post">
+                                            <p><span class="ch-icon-comment comment-gray"></span> Olá! Você consegue calcular o seu frete e o prazo de entrega no próprio anúncio, na parte superior próximo a informação de preço O Brused é um serviço de compra e venda de eletrônicos usados.</p>
+                                        </article>
+                                        <hr>
+                                        <article class="questions-list-question" role="post">
+                                            <p><span class="ch-icon-comment comment-blue"></span> Amigo preciso que chegue aqui em casa até o dia 3 de novembro será que tem possibilidade?</p>
+                                        </article>
+                                        <article class="questions-list-answer" role="post">
+                                            <p><span class="ch-icon-comment comment-gray"></span> Olá! Você consegue calcular o seu frete e o prazo de entrega no próprio anúncio, na parte superior próximo a informação de preço O Brused é um serviço de compra e venda de eletrônicos usados.</p>
+                                        </article>
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/index.min.js"></script>
+	</body>
+
+</html>
